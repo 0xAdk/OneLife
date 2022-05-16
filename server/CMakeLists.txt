@@ -1,0 +1,77 @@
+add_executable(OneLifeServer)
+
+target_sources(OneLifeServer PRIVATE
+	server.cpp
+	map.cpp
+	../gameSource/transitionBank.cpp
+	../gameSource/categoryBank.cpp
+	../gameSource/objectBank.cpp
+	../gameSource/animationBank.cpp
+	../gameSource/ageControl.cpp
+	../gameSource/folderCache.cpp
+	../gameSource/SoundUsage.cpp
+	../gameSource/objectMetadata.cpp
+	../gameSource/GridPos.cpp
+	../commonSource/fractalNoise.cpp
+	../commonSource/sayLimit.cpp
+	kissdb.cpp
+	lineardb3.cpp
+	lifeLog.cpp
+	foodLog.cpp
+	backup.cpp
+	triggers.cpp
+	dbCommon.cpp
+	playerStats.cpp
+	lineageLog.cpp
+	failureLog.cpp
+	names.cpp
+	monument.cpp
+	lineageLimit.cpp
+	curses.cpp
+	curseLog.cpp
+	spiral.cpp
+	objectSurvey.cpp
+	language.cpp
+	familySkipList.cpp
+	lifeTokens.cpp
+	fitnessScore.cpp
+	CoordinateTimeTracking.cpp
+	arcReport.cpp
+	curseDB.cpp
+	cravings.cpp
+)
+
+target_link_libraries(OneLifeServer PRIVATE
+	MINOR_GEMS_BASE
+
+	MINOR_GEMS_TYPE_IO
+	MINOR_GEMS_STRING_UTILS
+	MINOR_GEMS_STRING_BUFFER_OUTPUT_STREAM
+	MINOR_GEMS_PATH
+	MINOR_GEMS_TIME
+	MINOR_GEMS_THREAD
+	MINOR_GEMS_MUTEX_LOCK
+	MINOR_GEMS_TRANSLATION_MANAGER
+	MINOR_GEMS_SOCKET
+	MINOR_GEMS_HOST_ADDRESS
+	MINOR_GEMS_SOCKET_CLIENT
+	MINOR_GEMS_SOCKET_SERVER
+	MINOR_GEMS_SOCKET_POLL
+	MINOR_GEMS_NETWORK_FUNCTION_LOCKS
+	MINOR_GEMS_LOOKUP_THREAD
+	MINOR_GEMS_WEB_REQUEST
+	MINOR_GEMS_URL_UTILS
+	MINOR_GEMS_SETTINGS_MANAGER
+	MINOR_GEMS_FINISHED_SIGNAL_THREAD
+	MINOR_GEMS_SHA1
+	MINOR_GEMS_ENCODING_UTILS
+	MINOR_GEMS_DIRECTORY
+	MINOR_GEMS_LOG
+	MINOR_GEMS_APP_LOG
+	MINOR_GEMS_FILE_LOG
+	MINOR_GEMS_PRINT_LOG
+	MINOR_GEMS_PRINT_UTILS
+	MINOR_GEMS_DOUBLE_PAIR
+	MINOR_GEMS_STRING_TREE
+	MINOR_GEMS_CRC32
+)
